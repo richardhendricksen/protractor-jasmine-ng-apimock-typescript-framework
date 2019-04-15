@@ -27,7 +27,7 @@
     "express": "^4.16.4",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
-    "ng-apimock": "^1.4.1",
+    "ng-apimock": "^1.4.8",
     "protractor": "~5.4.0",
     "protractor-beautiful-reporter": "^1.2.1",
     "ts-node": "~7.0.0",
