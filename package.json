@@ -5,13 +5,16 @@
   "scripts": {
     "stop:mock": "lsof -ti:3000 | xargs kill -9",
     "postinstall": "webdriver-manager update",
-    "pretest": "npm run stop:mock",
-    "test:ci": "concurrently \"yarn --cwd ../../../example-test-app start:frontend\" \"wait-on http-get://localhost:4200 && protractor config/protractor-ci.conf.js\" --kill-others --success first",
+    "pretest:ci": "npm run stop:mock && yarn --cwd node_modules/mean-example-app",
+    "test:ci": "concurrently \"yarn --cwd node_modules/mean-example-app start\" \"wait-on http-get://localhost:4200 && protractor config/protractor-ci.conf.js\" --kill-others --success first",
     "test:dev": "protractor config/protractor-base.conf.js"
   },
   "homepage": "https://github.com/richardhendricksen/jasmine-protractor-ng-apimock/README.md",
   "author": "Richard Hendricksen",
   "license": "ISC",
+  "dependencies": {
+    "mean-example-app": "git+https://github.com/richardhendricksen/mean-example-app.git"
+  },
   "devDependencies": {
     "@types/chai": "^4.1.7",
     "@types/jasmine": "~2.8.6",
