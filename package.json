@@ -1,0 +1,37 @@
+{
+  "name": "jasmine-protractor-ng-apimock",
+  "version": "0.0.1",
+  "description": "FIT Jasmine protractor ng-apimock framework",
+  "scripts": {
+    "stop:mock": "lsof -ti:3000 | xargs kill -9",
+    "postinstall": "webdriver-manager update",
+    "pretest": "npm run stop:mock",
+    "test:ci": "concurrently \"yarn --cwd ../../../example-test-app start:frontend\" \"wait-on http-get://localhost:4200 && protractor config/protractor-ci.conf.js\" --kill-others --success first",
+    "test:dev": "protractor config/protractor-base.conf.js"
+  },
+  "homepage": "https://github.com/richardhendricksen/jasmine-protractor-ng-apimock/README.md",
+  "author": "Richard Hendricksen",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/jasmine": "~2.8.6",
+    "@types/jasminewd2": "~2.0.3",
+    "@types/node": "~10.1.0",
+    "angular": "^1.7.8",
+    "angular-resource": "^1.7.8",
+    "chai": "^4.2.0",
+    "concurrently": "^4.1.0",
+    "express": "^4.16.4",
+    "jasmine-core": "~2.99.1",
+    "jasmine-spec-reporter": "~4.2.1",
+    "ng-apimock": "^1.4.1",
+    "protractor": "~5.4.0",
+    "protractor-beautiful-reporter": "^1.2.1",
+    "ts-node": "~7.0.0",
+    "tsconfig-paths": "^3.7.0",
+    "tslint": "~5.11.0",
+    "tslint-defocus": "^2.0.6",
+    "typescript": "~3.1.6",
+    "wait-on": "^3.2.0"
+  }
+}
