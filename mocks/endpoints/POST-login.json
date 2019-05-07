@@ -1,0 +1,17 @@
+{
+  "expression": "/api/user/login$",
+  "method": "POST",
+  "name": "POST-login",
+  "responses": {
+    "successful": {
+      "default": true,
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept, Authorization",
+        "Access-Control-Allow-Methods": "GET, POST, PATCH, PUT, DELETE, OPTIONS"
+      },
+      "file": "data/POST-login/login-successful.json"
+    }
+  }
+}

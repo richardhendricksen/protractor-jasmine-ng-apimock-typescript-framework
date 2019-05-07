@@ -1,14 +1,26 @@
 {
-  "expression": "/api/posts$",
+  "expression": "/api/posts",
   "method": "GET",
   "name": "GET-posts",
   "responses": {
     "empty": {
       "default": true,
-      "file": "mocks/data/GET-posts/posts-empty.json"
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept, Authorization",
+        "Access-Control-Allow-Methods": "GET, POST, PATCH, PUT, DELETE, OPTIONS"
+      },
+      "file": "data/GET-posts/posts-empty.json"
     },
     "2-items": {
-      "file": "mocks/data/GET-posts/posts-2-items.json"
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept, Authorization",
+        "Access-Control-Allow-Methods": "GET, POST, PATCH, PUT, DELETE, OPTIONS"
+      },
+      "file": "data/GET-posts/posts-2-items.json"
     }
   }
 }
