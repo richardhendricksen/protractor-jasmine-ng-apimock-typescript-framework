@@ -1,7 +1,7 @@
 {
-  "name": "jasmine-protractor-ng-apimock",
+  "name": "protractor-jasmine-ng-apimock-typescript-framework",
   "version": "0.0.1",
-  "description": "FIT Jasmine protractor ng-apimock framework",
+  "description": "Frontend integration test framework using Protractor, Jasmine and ng-apimock",
   "scripts": {
     "stop:mock": "lsof -ti:3000 | xargs kill -9",
     "postinstall": "webdriver-manager update",
@@ -9,7 +9,7 @@
     "test:ci": "concurrently \"yarn --cwd node_modules/mean-example-app start\" \"wait-on http-get://localhost:4200 && protractor config/protractor-ci.conf.js\" --kill-others --success first",
     "test:dev": "protractor config/protractor-base.conf.js"
   },
-  "homepage": "https://github.com/richardhendricksen/jasmine-protractor-ng-apimock/README.md",
+  "homepage": "https://github.com/richardhendricksen/protractor-jasmine-ng-apimock-typescript-framework/blob/master/README.md",
   "author": "Richard Hendricksen",
   "license": "ISC",
   "dependencies": {
