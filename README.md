@@ -25,6 +25,10 @@ Will have the following folder structure:
       └─ GET-posts.json 
 ```
 
+### Example app
+This framework uses a MEAN example app, which is included in the package.json. 
+You can find it on my [Github](https://github.com/richardhendricksen/mean-example-app).
+
 ### Test development
 
 #### Running tests
