@@ -4,7 +4,7 @@ export class PostPage {
 
   rootEle: ElementFinder;
   editPostBtn: ElementFinder = $('[data-test="edit-post-btn"]');
-  deletePostBtn: ElementFinder = $('[data-test="edit-post-btn"]');
+  deletePostBtn: ElementFinder = $('[data-test="delete-post-btn"]');
   contentEle: ElementFinder;
 
   constructor(postNr: number) {
