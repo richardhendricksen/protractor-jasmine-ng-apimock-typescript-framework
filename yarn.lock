@@ -2089,7 +2089,7 @@ math-random@^1.0.1:
 
 "mean-example-app@git+https://github.com/richardhendricksen/mean-example-app.git":
   version "0.0.1"
-  resolved "git+https://github.com/richardhendricksen/mean-example-app.git#14b774b48437c789fb0a5eb9eb16455cf4fe6be5"
+  resolved "git+https://github.com/richardhendricksen/mean-example-app.git#b498935c93c2cc0fb66668dd8370df5a3ddb3b3a"
   dependencies:
     "@angular/animations" "^6.0.0"
     "@angular/cdk" "^6.0.0"

@@ -5,8 +5,9 @@
   "scripts": {
     "stop:mock": "lsof -ti:3000 | xargs kill -9",
     "webdriver:update": "webdriver-manager update",
-    "pretest:ci": "npm run stop:mock && yarn --cwd node_modules/mean-example-app",
+    "postinstall": "yarn --cwd node_modules/mean-example-app && webdriver-manager update",
     "test:ci": "concurrently \"yarn --cwd node_modules/mean-example-app start\" \"wait-on http-get://localhost:4200 && protractor config/protractor-ci.conf.js\" --kill-others --success first",
+    "posttest:ci": "npm run stop:mock",
     "test:dev": "protractor config/protractor-base.conf.js"
   },
   "homepage": "https://github.com/richardhendricksen/protractor-jasmine-ng-apimock-typescript-framework/blob/master/README.md",
