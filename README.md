@@ -1,8 +1,10 @@
-# Frontend integration tests
-The frontend integration tests use ng-apimock to mock the backend.  
-The test script will start the frontend, the mocking server, run the tests and close everything after.  
-The frontend will run on port 4200.
-The mocking server is hosted on port 3000.
+# Protractor-Jasmine-ng-apimock-typescript-framework
+A frontend integration testframework consisting of Protractor, Jasmine, ng-apimock. Written in Typescript.
+
+This framework uses Protractor for automating browser tests. The tests are written in Jasmine and use a Page Object model.
+Ng-apimock is used to mock the backend.  
+When running the tests it will serve the frontend, start the mocking server, run the tests and close everything after.  
+The frontend will run on port 4200. The mocking server is hosted on port 3000.
 
 ### Run tests
 `yarn it:ci`
@@ -10,25 +12,24 @@ The mocking server is hosted on port 3000.
 ### Mocks
 Mocks are defined in the `mocks` folder. The folder structure resembles the endpoint path.
 For example, GET endpoint using the following path:  
-`/api/user/{user}`  
+`/api/posts/`  
 Will have the following folder structure:
 ```
 .
 └─ mocks
    ├─ data
-   |  └─ user
-   |     ├─  user-default.json
-   |     └─   user-default.json
+   |  └─ GET-posts
+   |     ├─  posts-empty.json
+   |     └─  posts-2-items.json
    └─ endpoints
-      └─ user
-         └─ GET-user.json 
+      └─ GET-posts.json 
 ```
 
 ### Test development
 
 #### Running tests
 For test development use `yarn it:dev` to run the tests sequentially instead of in parallel. Also the browser will be visible.
-You will have to start the frontend yourself though.
+You will have to serve the frontend yourself.
 
 #### Linting
 Run `yarn lint` or `ng lint it` to run tslint on the integration tests.  
