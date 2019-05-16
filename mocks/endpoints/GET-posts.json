@@ -11,7 +11,7 @@
         "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept, Authorization",
         "Access-Control-Allow-Methods": "GET, POST, PATCH, PUT, DELETE, OPTIONS"
       },
-      "file": "data/GET-posts/posts-empty.json"
+      "file": "mocks/data/GET-posts/posts-empty.json"
     },
     "2-items": {
       "headers": {
@@ -20,7 +20,7 @@
         "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept, Authorization",
         "Access-Control-Allow-Methods": "GET, POST, PATCH, PUT, DELETE, OPTIONS"
       },
-      "file": "data/GET-posts/posts-2-items.json"
+      "file": "mocks/data/GET-posts/posts-2-items.json"
     }
   }
 }

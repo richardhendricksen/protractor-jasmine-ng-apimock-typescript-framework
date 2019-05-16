@@ -73,7 +73,6 @@ exports.config = {
       }
     }).getJasmine2Reporter());
 
-
     /* ensure ng mock api cookie gets loaded */
     return browser.get(browser.baseUrl);
   }

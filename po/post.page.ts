@@ -8,7 +8,7 @@ export class PostPage {
   contentEle: ElementFinder;
 
   constructor(postNr: number) {
-    this.rootEle = $$('mat-expansion-panel-header').get(postNr - 1);
+    this.rootEle = $$('mat-expansion-panel').get(postNr - 1);
     this.contentEle = this.rootEle.$('.mat-expansion-panel-body>p');
   }
 
@@ -17,7 +17,7 @@ export class PostPage {
   }
 
   async getTitle(): Promise<string> {
-    return await this.rootEle.$('span').getText();
+    return await this.rootEle.$('.mat-expansion-panel-header>.mat-content').getText();
   }
 
   async getContents(): Promise<string> {

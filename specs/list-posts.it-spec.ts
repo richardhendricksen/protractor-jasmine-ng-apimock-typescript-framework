@@ -19,8 +19,8 @@ describe('List posts', () => {
         expect(await postsOverviewPage.getInfoText()).to.equal('No posts added yet!');
       });
 
-      it('Then it should show the new post button', async () => {
-        expect(await postsOverviewPage.isNewPostBtnVisible()).to.equal(true);
+      it('Then it should show the login button', async () => {
+        expect(await postsOverviewPage.isLoginBtnVisible()).to.equal(true);
       });
     });
   });
@@ -38,8 +38,8 @@ describe('List posts', () => {
         expect(await postsOverviewPage.getPost(2).getTitle()).to.equal('This is the second post');
       });
 
-      it('Then it should show the new post button', async () => {
-        expect(await postsOverviewPage.isNewPostBtnVisible()).to.equal(true);
+      it('Then it should show the login button', async () => {
+        expect(await postsOverviewPage.isLoginBtnVisible()).to.equal(true);
       });
     });
 
@@ -51,33 +51,14 @@ describe('List posts', () => {
       });
 
       it('Then the contents of the post is shown', async () => {
-        expect(await postsOverviewPage.getPost(1).getContents()).to.equal('My first post');
+        expect(await postsOverviewPage.getPost(1).getTitle()).to.equal('My first post');
       });
 
       it('Then the edit button is shown', async () => {
-        expect(await postsOverviewPage.getPost(1).isEditButtonVisible()).to.equal(true);
-      });
-
-      it('Then the delete button is shown', async () => {
-        expect(await postsOverviewPage.getPost(1).isDeleteButtonVisible()).to.equal(true);
-      });
-
-    });
-
-    describe('When an open post is clicked', () => {
-      beforeAll(async () => {
-        await postsOverviewPage.getPost(1).click();
-      });
-
-      it('Then the content of the post is no longer shown', async () => {
-        expect(await postsOverviewPage.getPost(1).isContentVisible()).to.equal(false);
-      });
-
-      it('Then the edit button is no longer shown', async () => {
         expect(await postsOverviewPage.getPost(1).isEditButtonVisible()).to.equal(false);
       });
 
-      it('Then the delete button is no longer shown', async () => {
+      it('Then the delete button is shown', async () => {
         expect(await postsOverviewPage.getPost(1).isDeleteButtonVisible()).to.equal(false);
       });
 

@@ -11,7 +11,7 @@
         "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept, Authorization",
         "Access-Control-Allow-Methods": "GET, POST, PATCH, PUT, DELETE, OPTIONS"
       },
-      "file": "data/POST-login/login-successful.json"
+      "file": "mocks/data/POST-login/login-successful.json"
     }
   }
 }

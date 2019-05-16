@@ -4,7 +4,7 @@
   "description": "Frontend integration test framework using Protractor, Jasmine and ng-apimock",
   "scripts": {
     "stop:mock": "lsof -ti:3000 | xargs kill -9",
-    "postinstall": "webdriver-manager update",
+    "webdriver:update": "webdriver-manager update",
     "pretest:ci": "npm run stop:mock && yarn --cwd node_modules/mean-example-app",
     "test:ci": "concurrently \"yarn --cwd node_modules/mean-example-app start\" \"wait-on http-get://localhost:4200 && protractor config/protractor-ci.conf.js\" --kill-others --success first",
     "test:dev": "protractor config/protractor-base.conf.js"
