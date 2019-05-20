@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/richardhendricksen/protractor-jasmine-ng-apimock-typescript-framework.svg?branch=master)](https://travis-ci.org/richardhendricksen/protractor-jasmine-ng-apimock-typescript-framework)
 # Protractor-Jasmine-ng-apimock-typescript-framework
 A frontend integration testframework consisting of Protractor, Jasmine, ng-apimock. Written in Typescript.
 
