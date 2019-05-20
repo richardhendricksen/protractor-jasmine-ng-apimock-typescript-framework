@@ -6,7 +6,7 @@
     "stop:mock": "lsof -ti:3000 | xargs kill -9",
     "webdriver:update": "webdriver-manager update",
     "postinstall": "yarn --cwd node_modules/mean-example-app && webdriver-manager update",
-    "test:ci": "concurrently \"yarn --cwd node_modules/mean-example-app start\" \"wait-on http-get://localhost:4200 && protractor config/protractor-ci.conf.js\" --kill-others --success first",
+    "test:ci": "concurrently \"yarn --cwd node_modules/mean-example-app start:frontend\" \"wait-on http-get://localhost:4200 && protractor config/protractor-ci.conf.js\" --kill-others --success first",
     "posttest:ci": "npm run stop:mock",
     "test:dev": "protractor config/protractor-base.conf.js"
   },
